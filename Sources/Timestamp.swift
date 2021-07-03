@@ -13,7 +13,7 @@ public struct Timestamp {
     public let date: Date
     public let repeater: String?
     
-    static func from(string: String) -> Timestamp? {
+    public static func from(string: String) -> Timestamp? {
         let markPattern = "\\+|\\+\\+|\\.\\+|-|--"
         let pattern = "^(<|\\[)(.+?)(?: (\(markPattern))(\\d+)([hdwmy])\\s*)?(>|])$"
         guard let m = string.trimmed.match(pattern) else {
